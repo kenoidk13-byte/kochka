@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOCHKA — спортивный клуб. Рельеф начинается с кочки</title>
+<meta name="description" content="KOCHKA — спортивный клуб в Москве. Силовой тренинг, функционал, бокс, мобилити. Первая тренировка бесплатно.">
+<meta name="theme-color" content="#08090A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOCHKA — рельеф начинается с кочки">
+<meta property="og:description" content="Спортивный клуб в Москве: сила, функционал, бокс, мобилити. Первая тренировка бесплатно.">
+<meta property="og:image" content="assets/img/coach-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2308090A'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='bold' font-size='40' fill='%23D9FF00' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.loader,.hero__curtain{display:none}.hero__imgwrap{clip-path:none}[data-hero],[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<!-- ░░ PRELOADER ░░ -->
+<div class="loader" id="loader">
+  <div class="loader__grid">
+    <span class="loader__tag">СПОРТИВНЫЙ КЛУБ · МОСКВА</span>
+    <span class="loader__tag">С 2019</span>
+  </div>
+  <div class="loader__center">
+    <div class="loader__word">KOCHKA</div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+  <div class="loader__bottom">
+    <span>РЕЛЬЕФ НАЧИНАЕТСЯ С КОЧКИ</span>
+    <span class="loader__num" id="loaderNum">00</span>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<div class="scrollbar" aria-hidden="true"><i id="scrollFill"></i></div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#hero" data-magnetic>
+    <span class="nav__mark"></span>KOCHKA
+  </a>
+
+  <nav class="nav__links" aria-label="Основная навигация">
+    <a href="#manifesto" data-nav>Манифест</a>
+    <a href="#programs" data-nav>Направления</a>
+    <a href="#coaches" data-nav>Тренеры</a>
+    <a href="#schedule" data-nav>Расписание</a>
+    <a href="#pricing" data-nav>Тарифы</a>
+  </nav>
+
+  <div class="nav__right">
+    <a class="nav__phone" href="tel:+74951234567">+7 495 123-45-67</a>
+    <a class="btn btn--acid btn--sm" href="#join" data-magnetic><span>Записаться</span></a>
+    <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ░░ MOBILE MENU ░░ -->
+<div class="menu" id="menu">
+  <div class="menu__inner">
+    <span class="menu__label">МЕНЮ</span>
+    <a href="#manifesto" data-menu-link><i>01</i>Манифест</a>
+    <a href="#programs" data-menu-link><i>02</i>Направления</a>
+    <a href="#coaches" data-menu-link><i>03</i>Тренеры</a>
+    <a href="#schedule" data-menu-link><i>04</i>Расписание</a>
+    <a href="#pricing" data-menu-link><i>05</i>Тарифы</a>
+    <a href="#space" data-menu-link><i>06</i>Пространство</a>
+    <a href="#join" data-menu-link><i>07</i>Контакты</a>
+    <div class="menu__foot">
+      <a href="tel:+74951234567">+7 495 123-45-67</a>
+      <span>Москва, Нижняя Сыромятническая, 10</span>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ░░ 01 HERO ░░ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__ghost">KOCHKA</span>
+    <div class="hero__lines"></div>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow" data-hero>
+        <span class="eyebrow__dot"></span>Спортивный клуб · Москва · с 2019
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="word" data-hero>РЕЛЬЕФ</span></span>
+        <span class="line line--em"><em data-hero>начинается</em></span>
+        <span class="line"><span class="word" data-hero>С&nbsp;КОЧКИ</span></span>
+      </h1>
+
+      <div class="hero__under">
+        <p class="hero__lead" data-hero>
+          Тяжёлые веса, честная работа и люди, которые рядом.
+          Мы не продаём абонементы — мы строим тела и характер.
+        </p>
+        <div class="hero__actions" data-hero>
+          <a class="btn btn--acid" href="#join" data-magnetic data-cursor="→">
+            <span>Первая тренировка</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#programs"><span>Направления</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__media" data-hero>
+      <div class="hero__frame">
+        <div class="hero__imgwrap">
+          <img src="assets/img/coach-1.jpg" alt="Тренировка в зале KOCHKA" width="1086" height="1448" data-parallax="0.06" fetchpriority="high">
+        </div>
+        <span class="hero__badge">ЗАЛ · 07:30</span>
+        <span class="hero__vert">KOCHKA CLUB — СИЛА В ПОВТОРЕНИИ</span>
+        <div class="hero__curtain"></div>
+      </div>
+      <div class="hero__stamp">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circlePath" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circlePath">БЕЗ ВОЛШЕБСТВА · ТОЛЬКО ВЕС · </textPath></text></svg>
+        <span>★</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <a class="scrollcue" href="#manifesto">
+      <span class="scrollcue__line"><i></i></span>
+      <span>Листай вниз</span>
+    </a>
+    <div class="hero__meta">
+      <div><b>14</b><span>тренеров</span></div>
+      <div><b>620</b><span>м² зала</span></div>
+      <div><b>3 200+</b><span>участников</span></div>
+    </div>
+    <span class="hero__counter">01 <i>/</i> 08</span>
+  </div>
+</section>
+
+<!-- ░░ MARQUEE ░░ -->
+<div class="marquee marquee--acid">
+  <div class="marquee__track">
+    <span>СИЛА</span><span class="dot">●</span><span>ФУНКЦИОНАЛ</span><span class="dot">●</span><span>БОКС</span><span class="dot">●</span><span>МОБИЛИТИ</span><span class="dot">●</span><span>ДИСЦИПЛИНА</span><span class="dot">●</span>
+    <span>СИЛА</span><span class="dot">●</span><span>ФУНКЦИОНАЛ</span><span class="dot">●</span><span>БОКС</span><span class="dot">●</span><span>МОБИЛИТИ</span><span class="dot">●</span><span>ДИСЦИПЛИНА</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- ░░ 02 MANIFESTO ░░ -->
+<section class="manifesto section" id="manifesto">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">02 / 08</span>
+      <span class="section__label">Манифест</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="manifesto__grid">
+      <h2 class="manifesto__text" id="manifestoText">
+        Мы верим, что тело — это ландшафт. Каждая тренировка — маленькая кочка, из которой складывается рельеф. Без волшебных программ. Без обещаний за неделю. Только вес, пот и повторение.
+      </h2>
+
+      <aside class="manifesto__aside" data-reveal>
+        <p>
+          KOCHKA — это 620 м² железа, резины и людей, которые не ищут
+          лёгких путей. Здесь не оценивают, как ты выглядишь.
+          Здесь смотрят, как ты работаешь.
+        </p>
+        <p class="manifesto__sign">— команда KOCHKA</p>
+        <a class="link-arrow" href="#join">Прийти на тренировку
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal style="--i:0">
+        <b><span data-count="3200">0</span><i>+</i></b>
+        <span>участников клуба</span>
+      </div>
+      <div class="stat" data-reveal style="--i:1">
+        <b><span data-count="14">0</span></b>
+        <span>тренеров и кураторов</span>
+      </div>
+      <div class="stat" data-reveal style="--i:2">
+        <b><span data-count="620">0</span><i>м²</i></b>
+        <span>тренировочного пространства</span>
+      </div>
+      <div class="stat" data-reveal style="--i:3">
+        <b><span data-count="7">0</span><i>лет</i></b>
+        <span>растим людей, а не подписчиков</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 03 PROGRAMS ░░ -->
+<section class="programs section" id="programs">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">03 / 08</span>
+      <span class="section__label">Направления</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="programs__top">
+      <h2 class="h2" data-reveal>Выбери свою<br><em>кочку</em></h2>
+      <p class="programs__note" data-reveal>Шесть форматов. Один принцип: делай чуть больше, чем вчера.</p>
+    </div>
+
+    <ul class="prog" id="progList">
+      <li class="prog__row" data-img="assets/img/coach-1.jpg" data-reveal style="--i:0">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">01</span>
+        <h3 class="prog__title">Силовой тренинг</h3>
+        <p class="prog__desc">Штанга, база, прогрессия. Строим силу, а не картинку.</p>
+        <span class="prog__meta">60 мин · все уровни</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+      <li class="prog__row" data-img="assets/img/coach-2.jpg" data-reveal style="--i:1">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">02</span>
+        <h3 class="prog__title">Функционал</h3>
+        <p class="prog__desc">Круговая работа, гири, сани, канаты. Дыхание на пределе.</p>
+        <span class="prog__meta">45 мин · средний</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+      <li class="prog__row" data-img="assets/img/coach-3.jpg" data-reveal style="--i:2">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">03</span>
+        <h3 class="prog__title">Бокс</h3>
+        <p class="prog__desc">Техника, работа в парах, координация. Голова тоже тренируется.</p>
+        <span class="prog__meta">75 мин · любой</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+      <li class="prog__row" data-img="assets/img/coach-2.jpg" data-reveal style="--i:3">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">04</span>
+        <h3 class="prog__title">Мобилити</h3>
+        <p class="prog__desc">Подвижность, растяжка, дыхание. То, без чего не растёт сила.</p>
+        <span class="prog__meta">50 мин · лёгкий</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+      <li class="prog__row" data-img="assets/img/coach-1.jpg" data-reveal style="--i:4">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">05</span>
+        <h3 class="prog__title">Персональный</h3>
+        <p class="prog__desc">Один тренер, одна цель, твоя программа. Без случайных движений.</p>
+        <span class="prog__meta">60 мин · 1-на-1</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+      <li class="prog__row" data-img="assets/img/coach-3.jpg" data-reveal style="--i:5">
+        <a href="#join" class="prog__hit" data-cursor="→"></a>
+        <span class="prog__num">06</span>
+        <h3 class="prog__title">Открытый зал</h3>
+        <p class="prog__desc">Свободное посещение: пришёл, взял вес, сделал. Тихо и по делу.</p>
+        <span class="prog__meta">07:00–23:00 · без лимита</span>
+        <span class="prog__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </li>
+    </ul>
+
+    <div class="prog__preview" id="progPreview" aria-hidden="true">
+      <img src="assets/img/coach-1.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 04 COACHES (horizontal pin) ░░ -->
+<section class="coaches" id="coaches" data-horizontal>
+  <div class="coaches__pin">
+    <div class="coaches__head shell">
+      <div class="section__head">
+        <span class="section__index">04 / 08</span>
+        <span class="section__label">Тренеры</span>
+        <span class="section__line"></span>
+      </div>
+      <div class="coaches__intro">
+        <h2 class="h2">Люди, которые<br><em>считают повторы</em></h2>
+        <p>Не мотиваторы из соцсетей. Практики, которые каждый день стоят рядом с тобой у штанги.</p>
+      </div>
+    </div>
+
+    <div class="coaches__viewport">
+      <div class="coaches__track" id="coachTrack">
+        <article class="coach" data-reveal>
+          <div class="coach__media">
+            <img src="assets/img/coach-1.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
+            <span class="coach__tag">Силовой блок</span>
+          </div>
+          <div class="coach__body">
+            <h3>А. Волков</h3>
+            <p>Пауэрлифтинг, база, работа с травмами. 8 лет в зале — из них 5 в KOCHKA.</p>
+            <span class="coach__link">Силовой тренинг · Персональный</span>
+          </div>
+        </article>
+
+        <article class="coach" data-reveal>
+          <div class="coach__media">
+            <img src="assets/img/coach-2.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
+            <span class="coach__tag">Функционал</span>
+          </div>
+          <div class="coach__body">
+            <h3>Д. Ким</h3>
+            <p>Кроссфит, гири, выносливость. Умеет сделать так, чтобы ты не заметил, как дошёл до предела.</p>
+            <span class="coach__link">Функционал · Мобилити</span>
+          </div>
+        </article>
+
+        <article class="coach" data-reveal>
+          <div class="coach__media">
+            <img src="assets/img/coach-3.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
+            <span class="coach__tag">Бокс</span>
+          </div>
+          <div class="coach__body">
+            <h3>М. Орлов</h3>
+            <p>Техника, скорость, работа в парах. Ставит удар и снимает страх первого спарринга.</p>
+            <span class="coach__link">Бокс · Кондиции</span>
+          </div>
+        </article>
+
+        <article class="coach" data-reveal>
+          <div class="coach__media">
+            <img src="assets/img/coach-4.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1226" height="1283">
+            <span class="coach__tag">Кондиции</span>
+          </div>
+          <div class="coach__body">
+            <h3>К. Штерн</h3>
+            <p>Функционал и кондиции. Превращает «не могу» в «ещё один подход» — без пафоса и криков в зале.</p>
+            <span class="coach__link">Функционал · Кондиции</span>
+          </div>
+        </article>
+
+        <article class="coach" data-reveal>
+          <div class="coach__media">
+            <img src="assets/img/coach-5.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
+            <span class="coach__tag">Рельеф</span>
+          </div>
+          <div class="coach__body">
+            <h3>С. Крамер</h3>
+            <p>Силовая выносливость и работа на рельеф. Считает, что дисциплина важнее мотивации.</p>
+            <span class="coach__link">Силовой тренинг · Персональный</span>
+          </div>
+        </article>
+
+        <article class="coach coach--cta">
+          <div class="coach__cta-inner">
+            <span class="coach__tag">Свободное место</span>
+            <h3>Твой<br>тренер<br><em>здесь</em></h3>
+            <p>Приходи на бесплатную вводную — подберём куратора под цель и характер.</p>
+            <a class="btn btn--acid" href="#join" data-magnetic><span>Записаться</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="coaches__bar shell">
+      <span class="coaches__hint"><i></i>Листай вбок</span>
+      <div class="coaches__progress"><i id="coachFill"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 05 SCHEDULE ░░ -->
+<section class="schedule section" id="schedule">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">05 / 08</span>
+      <span class="section__label">Расписание</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="schedule__top">
+      <h2 class="h2" data-reveal>Неделя<br><em>по полкам</em></h2>
+      <div class="schedule__live" data-reveal>
+        <span class="pulse"></span>
+        <span><b id="liveCount">4</b> места на завтра</span>
+      </div>
+    </div>
+
+    <div class="days" id="days" role="tablist" aria-label="Дни недели"></div>
+
+    <div class="sched" id="sched" aria-live="polite"></div>
+
+    <div class="schedule__foot">
+      <p>Не нашёл время? Открытый зал работает каждый день с 07:00 до 23:00.</p>
+      <a class="link-arrow" href="#pricing">Смотреть тарифы
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 06 PRICING ░░ -->
+<section class="pricing section" id="pricing">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">06 / 08</span>
+      <span class="section__label">Тарифы</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="pricing__top">
+      <h2 class="h2" data-reveal>Честная<br><em>цена</em></h2>
+      <div class="toggle" data-reveal>
+        <button class="toggle__btn is-active" data-period="month">Месяц</button>
+        <button class="toggle__btn" data-period="year">Год <i>−20%</i></button>
+        <span class="toggle__pill" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="plans">
+      <article class="plan" data-reveal style="--i:0">
+        <header class="plan__head">
+          <h3>Старт</h3>
+          <p>Первый шаг. Для тех, кто только пробует.</p>
+        </header>
+        <div class="plan__price">
+          <span data-price-month="3900" data-price-year="3120">3 900</span><i>₽ / мес</i>
+        </div>
+        <ul class="plan__list">
+          <li>Открытый зал 07:00–23:00</li>
+          <li>8 групповых занятий в месяц</li>
+          <li>Вводная диагностика тела</li>
+          <li>Доступ в раздевалку и сауну</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#join" data-magnetic><span>Выбрать</span></a>
+      </article>
+
+      <article class="plan plan--hot" data-reveal style="--i:1">
+        <span class="plan__flag">Выбор 78%</span>
+        <header class="plan__head">
+          <h3>Рельеф</h3>
+          <p>Полный доступ. Для тех, кто приходит работать.</p>
+        </header>
+        <div class="plan__price">
+          <span data-price-month="6900" data-price-year="5520">6 900</span><i>₽ / мес</i>
+        </div>
+        <ul class="plan__list">
+          <li>Неограниченный открытый зал</li>
+          <li>Все групповые направления</li>
+          <li>Разбор техники раз в месяц</li>
+          <li>Сауна, полотенца, бар</li>
+          <li>Заморозка на 14 дней</li>
+        </ul>
+        <a class="btn btn--acid btn--full" href="#join" data-magnetic><span>Выбрать</span></a>
+      </article>
+
+      <article class="plan" data-reveal style="--i:2">
+        <header class="plan__head">
+          <h3>Private</h3>
+          <p>Максимум внимания. Результат по расписанию.</p>
+        </header>
+        <div class="plan__price">
+          <span data-price-month="12900" data-price-year="10320">12 900</span><i>₽ / мес</i>
+        </div>
+        <ul class="plan__list">
+          <li>Всё из тарифа «Рельеф»</li>
+          <li>8 персональных тренировок</li>
+          <li>План питания от нутрициолога</li>
+          <li>Замеры и отчёт каждые 2 недели</li>
+          <li>Персональный куратор в мессенджере</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#join" data-magnetic><span>Выбрать</span></a>
+      </article>
+    </div>
+
+    <p class="pricing__note" data-reveal>Разовое посещение — 1 200 ₽. Первая тренировка и вводная диагностика — бесплатно.</p>
+  </div>
+</section>
+
+<!-- ░░ 07 SPACE ░░ -->
+<section class="space" id="space">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">07 / 08</span>
+      <span class="section__label">Пространство</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="space__top">
+      <h2 class="h2" data-reveal>620 м²,<br>где не жалко<br><em>себя</em></h2>
+      <p data-reveal>Бетон, чугун и свет. Мы специально не сделали «уютно»: здесь должно быть немного некомфортно — как в хорошей работе.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <figure class="gallery__item gallery__item--tall" data-reveal>
+      <div class="gallery__img"><img src="assets/img/coach-2.jpg" alt="Зал KOCHKA" loading="lazy" width="1086" height="1448" data-parallax="0.1"></div>
+      <figcaption><span>Атмосфера зала</span><i>01</i></figcaption>
+    </figure>
+    <div class="gallery__col">
+      <figure class="gallery__item" data-reveal>
+        <div class="gallery__img"><img src="assets/img/coach-3.jpg" alt="Тренировка в KOCHKA" loading="lazy" width="1086" height="1448" data-parallax="0.16"></div>
+        <figcaption><span>Тренер на смене</span><i>02</i></figcaption>
+      </figure>
+      <div class="gallery__card" data-reveal>
+        <h3>Что внутри</h3>
+        <ul>
+          <li><span>Силовая зона</span><b>240 м²</b></li>
+          <li><span>Функциональная</span><b>160 м²</b></li>
+          <li><span>Ринг и бокс</span><b>80 м²</b></li>
+          <li><span>Студия мобилити</span><b>60 м²</b></li>
+          <li><span>Сауна и душевые</span><b>80 м²</b></li>
+        </ul>
+      </div>
+    </div>
+    <figure class="gallery__item" data-reveal>
+      <div class="gallery__img"><img src="assets/img/coach-1.jpg" alt="Атмосфера клуба" loading="lazy" width="1086" height="1448" data-parallax="0.13"></div>
+      <figcaption><span>Будний вечер в KOCHKA</span><i>03</i></figcaption>
+    </figure>
+  </div>
+
+  <div class="space__marquee">
+    <div class="marquee__track">
+      <span>KOCHKA</span><span class="outline">KOCHKA</span><span>KOCHKA</span><span class="outline">KOCHKA</span>
+      <span>KOCHKA</span><span class="outline">KOCHKA</span><span>KOCHKA</span><span class="outline">KOCHKA</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 08 JOIN ░░ -->
+<section class="join" id="join">
+  <div class="shell">
+    <div class="section__head">
+      <span class="section__index">08 / 08</span>
+      <span class="section__label">Запись</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="join__grid">
+      <div class="join__copy">
+        <h2 class="join__title">
+          <span class="line"><span data-reveal>Первый шаг —</span></span>
+          <span class="line"><em data-reveal>кочка</em></span>
+        </h2>
+        <p data-reveal>Оставь заявку — перезвоним в течение 15 минут, подберём время и тренера. Первая тренировка бесплатно, без обязательств и продаж по телефону.</p>
+
+        <div class="join__contacts" data-reveal>
+          <div>
+            <span>Адрес</span>
+            <b>Москва, Нижняя Сыромятническая, 10, стр. 9</b>
+          </div>
+          <div>
+            <span>Часы</span>
+            <b>Ежедневно 07:00 — 23:00</b>
+          </div>
+          <div>
+            <span>Телефон</span>
+            <b><a href="tel:+74951234567">+7 495 123-45-67</a></b>
+          </div>
+        </div>
+
+        <div class="join__socials" data-reveal>
+          <a href="#" data-magnetic>Telegram</a>
+          <a href="#" data-magnetic>Instagram</a>
+          <a href="#" data-magnetic>YouTube</a>
+        </div>
+      </div>
+
+      <form class="form" id="form" novalidate data-reveal>
+        <span class="form__label">Заявка на тренировку</span>
+        <label class="field">
+          <span>Как тебя зовут</span>
+          <input type="text" name="name" placeholder="Имя" required autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+        </label>
+        <label class="field">
+          <span>Направление</span>
+          <select name="direction">
+            <option>Силовой тренинг</option>
+            <option>Функционал</option>
+            <option>Бокс</option>
+            <option>Мобилити</option>
+            <option>Персональный</option>
+            <option>Пока не знаю</option>
+          </select>
+        </label>
+        <button class="btn btn--acid btn--full" type="submit" data-magnetic data-cursor="→"><span>Записаться бесплатно</span></button>
+        <p class="form__policy">Нажимая кнопку, ты соглашаешься на обработку персональных данных. Никакого спама — только звонок.</p>
+        <div class="form__ok" id="formOk">
+          <b>Готово.</b>
+          <span>Заявка у нас. Перезвоним в течение 15 минут — и начнём с малого.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__word" data-reveal>KOCHKA</div>
+    <div class="footer__row">
+      <span>© 2026 Kochka Athletic Club</span>
+      <span>Рельеф начинается с кочки</span>
+      <a href="#hero">Наверх ↑</a>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<a class="sticky-cta" href="#join" id="stickyCta">
+  <span>Первая тренировка — бесплатно</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
