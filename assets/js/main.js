@@ -622,5 +622,118 @@
     if (cta && cta.classList.contains('is-full')) e.preventDefault();
   });
 
+  /* ------------------------------------------------------------
+     TRAINER LIGHTBOX
+  ------------------------------------------------------------ */
+  const lb = $('#lightbox');
+  const lbCards = $$('.coach').filter(c => c.querySelector('.coach__zoom'));
+  if (lb && lbCards.length) {
+    const lbImg = $('#lbImg');
+    const lbName = $('#lbName');
+    const lbMeta = $('#lbMeta');
+    const lbCount = $('#lbCount');
+    const lbClose = $('.lightbox__close');
+    const lbBtns = $$('.lb-btn', lb);
+    const total = lbCards.length;
+    const pad2 = n => String(n).padStart(2, '0');
+    let lbIndex = 0;
+    let lbReturn = null;
+    let lbScroll = 0;
+    let lbTouchX = null;
+
+    const isLbOpen = () => !lb.hidden;
+
+    const preload = (i) => {
+      const card = lbCards[(i + total) % total];
+      const img = card && card.querySelector('img');
+      if (img && img.getAttribute('src')) { const p = new Image(); p.src = img.getAttribute('src'); }
+    };
+
+    const renderLb = () => {
+      const card = lbCards[lbIndex];
+      const img = card.querySelector('img');
+      const name = card.querySelector('h3');
+      const tag = card.querySelector('.coach__tag');
+      const role = card.querySelector('.coach__link');
+      lbImg.src = img.getAttribute('src');
+      lbImg.alt = (name ? name.textContent.trim() + ' — ' : '') + 'тренер клуба KOCHKA';
+      lbName.textContent = name ? name.textContent.trim() : 'Тренер';
+      lbMeta.textContent = [tag && tag.textContent.trim(), role && role.textContent.trim()].filter(Boolean).join(' · ');
+      lbCount.textContent = pad2(lbIndex + 1) + ' / ' + pad2(total);
+      preload(lbIndex + 1);
+      preload(lbIndex - 1);
+    };
+
+    const openLb = (i, trigger) => {
+      lbIndex = (i + total) % total;
+      lbReturn = trigger || document.activeElement;
+      lbScroll = window.scrollY;
+      renderLb();
+      lb.hidden = false;
+      document.documentElement.classList.add('is-lb');
+      body.classList.add('is-lb');
+      requestAnimationFrame(() => lb.classList.add('is-open'));
+      if (lbClose) lbClose.focus({ preventScroll: true });
+    };
+
+    const closeLb = () => {
+      if (!isLbOpen()) return;
+      lb.classList.remove('is-open');
+      document.documentElement.classList.remove('is-lb');
+      body.classList.remove('is-lb');
+      const done = () => {
+        lb.hidden = true;
+        lbImg.removeAttribute('src');
+        lbImg.alt = '';
+      };
+      if (reduce) done(); else setTimeout(done, 400);
+      if (Math.abs(window.scrollY - lbScroll) > 1) window.scrollTo(0, lbScroll);
+      if (lbReturn && lbReturn.focus) lbReturn.focus({ preventScroll: true });
+    };
+
+    const stepLb = (dir) => {
+      lbIndex = (lbIndex + dir + total) % total;
+      renderLb();
+    };
+
+    document.addEventListener('click', (e) => {
+      const zoom = e.target.closest('.coach__zoom');
+      if (zoom && !isLbOpen()) {
+        e.preventDefault();
+        openLb(lbCards.indexOf(zoom.closest('.coach')), zoom);
+        return;
+      }
+      if (!isLbOpen()) return;
+      if (e.target.closest('[data-lb-close]')) { e.preventDefault(); closeLb(); }
+      else if (e.target.closest('[data-lb-prev]')) { e.preventDefault(); stepLb(-1); }
+      else if (e.target.closest('[data-lb-next]')) { e.preventDefault(); stepLb(1); }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!isLbOpen()) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeLb(); return; }
+      if (e.key === 'ArrowRight') { e.preventDefault(); stepLb(1); return; }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); stepLb(-1); return; }
+      if (e.key !== 'Tab') return;
+      const f = [lbClose].concat(lbBtns).filter(Boolean);
+      if (!f.length) return;
+      const first = f[0];
+      const last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    lb.addEventListener('touchstart', (e) => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => {
+      if (lbTouchX === null) return;
+      const dx = e.changedTouches[0].clientX - lbTouchX;
+      lbTouchX = null;
+      if (Math.abs(dx) > 45) stepLb(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    // keep the page from scrolling behind the dialog on touch devices
+    lb.addEventListener('touchmove', (e) => { e.preventDefault(); }, { passive: false });
+  }
+
   updateScroll();
 })();

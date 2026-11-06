@@ -297,6 +297,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-1.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
             <span class="coach__tag">Силовой блок</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>А. Волков</h3>
@@ -309,6 +310,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-2.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
             <span class="coach__tag">Функционал</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>Д. Ким</h3>
@@ -321,6 +323,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-3.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
             <span class="coach__tag">Бокс</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>М. Орлов</h3>
@@ -333,6 +336,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-4.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1226" height="1283">
             <span class="coach__tag">Кондиции</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>К. Штерн</h3>
@@ -345,6 +349,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-5.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1086" height="1448">
             <span class="coach__tag">Рельеф</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>С. Крамер</h3>
@@ -357,6 +362,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-6.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1050" height="1400">
             <span class="coach__tag">Силовой блок</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>Г. Титов</h3>
@@ -369,6 +375,7 @@
           <div class="coach__media">
             <img src="assets/img/coach-7.jpg" alt="Тренер клуба KOCHKA" loading="lazy" width="1050" height="1400">
             <span class="coach__tag">Функционал</span>
+            <button class="coach__zoom" type="button" aria-label="Открыть фото крупно"><span>Смотреть</span></button>
           </div>
           <div class="coach__body">
             <h3>А. Рейн</h3>
@@ -639,6 +646,35 @@
   <span>Первая тренировка — бесплатно</span>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
 </a>
+
+<!-- ░░ LIGHTBOX ░░ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbName" hidden>
+  <div class="lightbox__back" data-lb-close></div>
+
+  <button class="lightbox__close" type="button" data-lb-close aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+  </button>
+
+  <figure class="lightbox__figure">
+    <div class="lightbox__imgwrap"><img id="lbImg" src="" alt=""></div>
+    <figcaption class="lightbox__cap">
+      <span class="lightbox__name" id="lbName"></span>
+      <span class="lightbox__meta" id="lbMeta"></span>
+    </figcaption>
+  </figure>
+
+  <div class="lightbox__nav">
+    <button class="lb-btn" type="button" data-lb-prev aria-label="Предыдущий тренер">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <span class="lightbox__count" id="lbCount">01 / 07</span>
+    <button class="lb-btn" type="button" data-lb-next aria-label="Следующий тренер">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+
+  <span class="lightbox__hint">ESC — закрыть · ← → — листать</span>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>
